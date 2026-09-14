@@ -1,0 +1,26 @@
+From 6ffa55e159d1244a8e3bb598e3918d28154e7f0a Mon Sep 17 00:00:00 2001
+From: Maria Lisina <sekoohaka.sarisan@gmail.com>
+Date: Mon, 14 Sep 2026 22:45:15 +0500
+Subject: [PATCH 11/11] mrproper: Ignore debian directory
+
+Signed-off-by: Maria Lisina <sekoohaka.sarisan@gmail.com>
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 73e7bac7527e..8d9d338ea64c 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1746,7 +1746,7 @@ CLEAN_FILES += vmlinux.symvers modules-only.symvers \
+ # Directories & files removed with 'make mrproper'
+ MRPROPER_FILES += include/config include/generated          \
+ 		  arch/$(SRCARCH)/include/generated .objdiff \
+-		  debian snap tar-install PKGBUILD pacman \
++		  snap tar-install PKGBUILD pacman \
+ 		  .config .config.old .version \
+ 		  Module.symvers \
+ 		  certs/signing_key.pem \
+-- 
+2.47.3
+

@@ -1,0 +1,50 @@
+Source: linux-mdf-xx
+Section: kernel
+Maintainer: Maria Lisina <sekoohaka.sarisan@gmail.com>
+Build-Depends: debhelper-compat (= 13),
+               bc,
+               bison,
+               flex,
+               kmod,
+               pahole,
+               python3,
+               rsync,
+               libdw-dev,
+               libelf-dev,
+               libssl-dev,
+               clang-21,
+               lld-21,
+               llvm-21,
+               rustc
+Standards-Version: 4.7.4
+
+Package: linux-image-mdf-xx
+Architecture: amd64
+Depends: linux-image-@KERNELVERSION@-mdf-xx,
+         ${misc:Depends}
+Description: Linux Kernel for Huawei Matebook D 14 2023 (MDF-XX)
+
+Package: linux-image-@KERNELVERSION@-mdf-xx
+Architecture: amd64
+Depends: dracut,
+         linux-base,
+         firmware-intel-graphics,
+         firmware-iwlwifi,
+         firmware-sof-signed,
+         ${misc:Depends}
+Recommends: apparmor,
+            firmware-realtek
+Description: Linux Kernel for Huawei Matebook D 14 2023 (MDF-XX)
+
+Package: linux-image-mdf-xx-dbg
+Section: debug
+Architecture: amd64
+Depends: linux-image-@KERNELVERSION@-mdf-xx-dbg,
+         ${misc:Depends}
+Description: Linux Kernel debug for Huawei Matebook D 14 2023 (MDF-XX)
+
+Package: linux-image-@KERNELVERSION@-mdf-xx-dbg
+Section: debug
+Architecture: amd64
+Depends: ${misc:Depends}
+Description: Linux Kernel debug for Huawei Matebook D 14 2023 (MDF-XX)

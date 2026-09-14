@@ -1,0 +1,11 @@
+0001-drm-i915-bios-search-for-VBT-57-by-default.patch
+0002-drm-i915-bios-store-VBT-57-s-metadata-in-intel_vbt_d.patch
+0003-drm-i915-bios-print-VS-PE-O-port-info.patch
+0004-drm-i915-bios-de-allocate-VS-PE-O-buffers-for-each-p.patch
+0005-drm-i915-buf_trans-add-vfunc-for-VS-PE-O.patch
+0006-drm-i915-override-Snps-s-VS-PE-when-requested.patch
+0007-drm-i915-override-Combo-s-VS-PE-when-requested.patch
+0008-drm-i915-bios-remove-VS-PE-O-warning.patch
+0009-platform-x86-Add-Goodix-fingerprint-EC-mailbox-trans.patch
+0010-mfd-intel-lpss-Prevent-DebugFS-messages-if-it-is-not.patch
+0011-mrproper-Ignore-debian-directory.patch

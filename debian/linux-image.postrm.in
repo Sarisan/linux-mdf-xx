@@ -1,0 +1,17 @@
+#!/bin/sh -e
+
+version=@KERNELRELEASE@
+path=/boot/vmlinuz-${version}
+
+case "${1}" in
+    (purge|remove)
+    ;;
+    (*)
+        exit 0
+    ;;
+esac
+
+linux-update-symlinks remove ${version} ${path}
+linux-run-hooks image postrm ${version} ${path} -- ${@}
+
+#DEBHELPER#
