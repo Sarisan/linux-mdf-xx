@@ -34,12 +34,15 @@ When the building is done you will see `.deb` files in the upper directory
 
 List of external hardware support and features enabled
 
+* Clang ThinLTO
+* RFCOMM protocol support
 * NT synchronization primitive emulation
 * Universal TUN/TAP device driver support
 * Realtek RTL8152/RTL8153 Based USB Ethernet Adapters
 * CDC NCM support
 * Huawei NCM embedded AT channel support
 * Host for RNDIS and ActiveSync devices
+* Dummy BT SCO codec driver
 * Wacom Intuos/Graphire tablet support (USB)
 * USB Mass Storage support
 * USB Attached SCSI
