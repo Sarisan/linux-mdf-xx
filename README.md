@@ -47,7 +47,7 @@ List of external hardware support and features enabled
 * Android Binder IPC Driver
 * Android Binderfs filesystem
 * exFAT filesystem support
-* NTFS file system support
+* NTFS Read-Write file system support
 * SquashFS 4.0 - Squashed file system support
 
 ## Why
