@@ -1,3 +1,10 @@
+linux-mdf-xx (7.2.6-2) stable; urgency=low
+
+  * Enabled ntfs3 support.
+
+ -- Maria Lisina <sekoohaka.sarisan@gmail.com>  Tue, 15 Sep 2026 08:59:24 +0000
+
+
 linux-mdf-xx (7.2.6-1) stable; urgency=low
 
   * Initial release.
