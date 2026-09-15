@@ -7,5 +7,5 @@
 0007-drm-i915-override-Combo-s-VS-PE-when-requested.patch
 0008-drm-i915-bios-remove-VS-PE-O-warning.patch
 0009-platform-x86-Add-Goodix-fingerprint-EC-mailbox-trans.patch
-0010-mfd-intel-lpss-Prevent-DebugFS-messages-if-it-is-not.patch
+0010-mfd-intel-lpss-Clean-up-and-modernize-DebugFS-usage.patch
 0011-mrproper-Ignore-debian-directory.patch
