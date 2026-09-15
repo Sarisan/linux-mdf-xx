@@ -12,24 +12,6 @@ I don't enable all possible hardware blindly
 If you need some external hardware support  
 You should open an issue
 
-## Building
-
-Clone this repository somewhere and run this command inside it to download Linux Kernel source  
-You must have `devscripts` installed
-
-```
-uscan --download-current-version
-```
-
-You will see a directory named `linux-mdf-xx-<version>` in the upper directory  
-Go to it and simply run this command to build the packages
-
-```
-debuild -us -uc -ui -b
-```
-
-When the building is done you will see `.deb` files in the upper directory
-
 ## External
 
 List of external hardware support and features enabled
@@ -52,6 +34,24 @@ List of external hardware support and features enabled
 * exFAT filesystem support
 * NTFS Read-Write file system support
 * SquashFS 4.0 - Squashed file system support
+
+## Building
+
+Clone this repository somewhere and run this command inside it to download Linux Kernel source  
+You must have `devscripts` installed
+
+```
+uscan --download-current-version
+```
+
+You will see a directory named `linux-mdf-xx-<version>` in the upper directory  
+Go to it and simply run this command to build the packages
+
+```
+debuild -us -uc -ui -b
+```
+
+When the building is done you will see `.deb` files in the upper directory
 
 ## Why
 
