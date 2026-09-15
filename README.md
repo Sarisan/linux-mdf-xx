@@ -34,6 +34,7 @@ When the building is done you will see `.deb` files in the upper directory
 
 List of external hardware support and features enabled
 
+* NT synchronization primitive emulation
 * Universal TUN/TAP device driver support
 * Realtek RTL8152/RTL8153 Based USB Ethernet Adapters
 * CDC NCM support
@@ -43,6 +44,11 @@ List of external hardware support and features enabled
 * USB Mass Storage support
 * USB Attached SCSI
 * USB Winchiphead CH341 Single Port Serial Driver
+* Android Binder IPC Driver
+* Android Binderfs filesystem
+* exFAT filesystem support
+* NTFS file system support
+* SquashFS 4.0 - Squashed file system support
 
 ## Why
 
