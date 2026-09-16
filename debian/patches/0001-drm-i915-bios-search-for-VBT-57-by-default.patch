@@ -1,7 +1,7 @@
 From 7f2ea6478a14a331fab05942a3ab34a6a1ea1256 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20Grzelak?= <michal.grzelak@intel.com>
 Date: Fri, 4 Sep 2026 14:31:41 +0200
-Subject: [PATCH 01/11] drm/i915/bios: search for VBT #57 by default
+Subject: [PATCH 01/14] drm/i915/bios: search for VBT #57 by default
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

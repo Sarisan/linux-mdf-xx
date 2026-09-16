@@ -1,0 +1,34 @@
+From 63ad9586ab548c174519daef7729decb508cb137 Mon Sep 17 00:00:00 2001
+From: Maria Lisina <sekoohaka.sarisan@gmail.com>
+Date: Wed, 16 Sep 2026 19:36:40 +0500
+Subject: [PATCH 11/14] mfd: intel-lpss: Use plain octal values for file
+ permissions
+
+S_IRUGO macro is obsoleted and not recommended to use,
+therefore replace it with plain octal values.
+
+Signed-off-by: Maria Lisina <sekoohaka.sarisan@gmail.com>
+---
+ drivers/mfd/intel-lpss.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/drivers/mfd/intel-lpss.c b/drivers/mfd/intel-lpss.c
+index b6958e99cf54..190de88d146a 100644
+--- a/drivers/mfd/intel-lpss.c
++++ b/drivers/mfd/intel-lpss.c
+@@ -151,9 +151,9 @@ static void intel_lpss_debugfs_add(struct intel_lpss *lpss)
+ 	/* Cache the values into lpss structure */
+ 	intel_lpss_cache_ltr(lpss);
+ 
+-	debugfs_create_x32("capabilities", S_IRUGO, dir, &lpss->caps);
+-	debugfs_create_x32("active_ltr", S_IRUGO, dir, &lpss->active_ltr);
+-	debugfs_create_x32("idle_ltr", S_IRUGO, dir, &lpss->idle_ltr);
++	debugfs_create_x32("capabilities", 0444, dir, &lpss->caps);
++	debugfs_create_x32("active_ltr", 0444, dir, &lpss->active_ltr);
++	debugfs_create_x32("idle_ltr", 0444, dir, &lpss->idle_ltr);
+ 
+ 	lpss->debugfs = dir;
+ }
+-- 
+2.47.3
+

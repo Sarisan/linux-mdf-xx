@@ -1,7 +1,7 @@
-From 8342af35d6f7b2e196a651e461892ec69a9795d7 Mon Sep 17 00:00:00 2001
+From 4c1823fda38359a0d23ae464796a7292e9f2b5b8 Mon Sep 17 00:00:00 2001
 From: Maria Lisina <sekoohaka.sarisan@gmail.com>
-Date: Wed, 16 Sep 2026 03:50:59 +0500
-Subject: [PATCH 11/11] mrproper: Ignore debian directory
+Date: Wed, 16 Sep 2026 19:44:03 +0500
+Subject: [PATCH 14/14] mrproper: Ignore debian directory
 
 Signed-off-by: Maria Lisina <sekoohaka.sarisan@gmail.com>
 ---

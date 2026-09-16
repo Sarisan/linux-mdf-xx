@@ -1,7 +1,7 @@
 From 90d9f5b2b87fc62fdbd4ee0f1271b76e81df4694 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Ertu=C4=9Frul=20Top=C3=A7u?= <ertugtopcu0@gmail.com>
 Date: Sun, 16 Aug 2026 22:49:55 +0300
-Subject: [PATCH 09/11] platform/x86: Add Goodix fingerprint EC mailbox
+Subject: [PATCH 09/14] platform/x86: Add Goodix fingerprint EC mailbox
  transport
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8

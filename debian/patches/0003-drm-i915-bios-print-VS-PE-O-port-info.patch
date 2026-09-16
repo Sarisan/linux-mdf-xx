@@ -1,7 +1,7 @@
 From fd76c4f3aa18b4b533cb7fded58186327bb66287 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20Grzelak?= <michal.grzelak@intel.com>
 Date: Fri, 4 Sep 2026 14:31:43 +0200
-Subject: [PATCH 03/11] drm/i915/bios: print VS/PE-O port info
+Subject: [PATCH 03/14] drm/i915/bios: print VS/PE-O port info
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

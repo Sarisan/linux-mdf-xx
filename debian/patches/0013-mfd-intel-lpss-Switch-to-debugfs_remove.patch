@@ -1,0 +1,30 @@
+From f65f85f24cfa1ce75966f0b0539c2661515e404e Mon Sep 17 00:00:00 2001
+From: Maria Lisina <sekoohaka.sarisan@gmail.com>
+Date: Wed, 16 Sep 2026 19:36:42 +0500
+Subject: [PATCH 13/14] mfd: intel-lpss: Switch to debugfs_remove()
+
+debugfs_remove_recursive() is deprecated and has become
+a macro for debugfs_remove(), replace it with the direct
+debugfs_remove() call instead.
+
+Signed-off-by: Maria Lisina <sekoohaka.sarisan@gmail.com>
+---
+ drivers/mfd/intel-lpss.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/mfd/intel-lpss.c b/drivers/mfd/intel-lpss.c
+index f1a8feb0fdf2..beb01252f902 100644
+--- a/drivers/mfd/intel-lpss.c
++++ b/drivers/mfd/intel-lpss.c
+@@ -160,7 +160,7 @@ static void intel_lpss_debugfs_add(struct intel_lpss *lpss)
+ 
+ static void intel_lpss_debugfs_remove(struct intel_lpss *lpss)
+ {
+-	debugfs_remove_recursive(lpss->debugfs);
++	debugfs_remove(lpss->debugfs);
+ }
+ 
+ static void intel_lpss_ltr_set(struct device *dev, s32 val)
+-- 
+2.47.3
+
