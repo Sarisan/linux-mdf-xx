@@ -1,6 +1,6 @@
-From 76765ef8f8bef29aea8fb98067a7534f82f3def4 Mon Sep 17 00:00:00 2001
+From 271b790342a5e4b4dd9793d451f606a071c82a02 Mon Sep 17 00:00:00 2001
 From: Maria Lisina <sekoohaka.sarisan@gmail.com>
-Date: Wed, 16 Sep 2026 19:36:39 +0500
+Date: Wed, 16 Sep 2026 21:23:47 +0500
 Subject: [PATCH 10/14] mfd: intel-lpss: Remove redundant DebugFS error check
 
 The DebugFS API is designed to handle errors gracefully.
@@ -9,6 +9,7 @@ Any explicit checking on return values is considered an anti-pattern.
 This patch removes unnecessary error checking and converts
 intel_lpss_debugfs_add() into a void function.
 
+Reviewed-by: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
 Signed-off-by: Maria Lisina <sekoohaka.sarisan@gmail.com>
 ---
  drivers/mfd/intel-lpss.c | 10 ++--------
