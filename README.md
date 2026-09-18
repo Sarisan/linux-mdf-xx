@@ -16,6 +16,8 @@ You should open an issue
 
 List of external hardware support and features enabled
 
+* Virtualization
+* KVM for Intel (and compatible) processors support
 * Clang ThinLTO
 * RFCOMM protocol support
 * NT synchronization primitive emulation
