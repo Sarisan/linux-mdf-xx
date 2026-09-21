@@ -14,8 +14,7 @@ Build-Depends: debhelper-compat (= 13),
                libssl-dev,
                clang-21,
                lld-21,
-               llvm-21,
-               rustc
+               llvm-21
 Standards-Version: 4.7.4
 
 Package: linux-image-mdf-xx
