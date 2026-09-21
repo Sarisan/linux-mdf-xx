@@ -1,7 +1,7 @@
-From dc848b8a178cfcb0e3d72a52758f7d2acfce70ea Mon Sep 17 00:00:00 2001
+From a23bc02a30b31d2a437a262bbcd9d9457fbc3920 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20Grzelak?= <michal.grzelak@intel.com>
 Date: Mon, 7 Sep 2026 14:27:42 +0200
-Subject: [PATCH 07/14] drm/i915: override Combo's VS/PE when requested
+Subject: [PATCH 07/15] drm/i915: override Combo's VS/PE when requested
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

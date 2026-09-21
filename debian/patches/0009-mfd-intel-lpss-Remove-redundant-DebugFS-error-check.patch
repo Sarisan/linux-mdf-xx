@@ -1,7 +1,7 @@
-From 271b790342a5e4b4dd9793d451f606a071c82a02 Mon Sep 17 00:00:00 2001
+From 8a25f09407c31cdb965340b5c075f36c396330ca Mon Sep 17 00:00:00 2001
 From: Maria Lisina <sekoohaka.sarisan@gmail.com>
 Date: Wed, 16 Sep 2026 21:23:47 +0500
-Subject: [PATCH 10/14] mfd: intel-lpss: Remove redundant DebugFS error check
+Subject: [PATCH 09/15] mfd: intel-lpss: Remove redundant DebugFS error check
 
 The DebugFS API is designed to handle errors gracefully.
 Any explicit checking on return values is considered an anti-pattern.

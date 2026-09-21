@@ -1,7 +1,7 @@
-From 90d9f5b2b87fc62fdbd4ee0f1271b76e81df4694 Mon Sep 17 00:00:00 2001
+From db42fd0e7fe4cf6776466bf7d699c59dc9a91850 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Ertu=C4=9Frul=20Top=C3=A7u?= <ertugtopcu0@gmail.com>
 Date: Sun, 16 Aug 2026 22:49:55 +0300
-Subject: [PATCH 09/14] platform/x86: Add Goodix fingerprint EC mailbox
+Subject: [PATCH 13/15] platform/x86: Add Goodix fingerprint EC mailbox
  transport
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
@@ -70,7 +70,7 @@ index 000000000000..11ca80a41ca7
 +		GOODIX_EC_IOCTL_FLUSH_RX discards all queued receive records.
 +Users:		libfprint Goodix GXFP5130 userspace driver
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 8014b9f8253e..638dc099fabf 100644
+index 95cd976a068c..665f52caa8ac 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -11043,6 +11043,14 @@ M:	Maud Spierings <maudspierings@gocontroll.com>

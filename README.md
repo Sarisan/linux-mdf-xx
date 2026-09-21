@@ -4,6 +4,7 @@ Highly hardened and tailored Linux Kernel for Huawei Matebook D 14 2023 (MDF-XX)
 
 This kernel also includes fixes for vswing/preemph tables  
 Support for Goodix eSPI fingerprint reader (GXFP5130)  
+Burst-Oriented Response Enhancer CPU Scheduler  
 And support for some external hardware
 
 External hardware support is being added on demand  

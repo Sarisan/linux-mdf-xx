@@ -1,7 +1,7 @@
-From 65cd1eabb7242c8b2d1000a851e8b9fadbb5a427 Mon Sep 17 00:00:00 2001
+From de41d306cf26dbe837f13c517c1617833468098a Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20Grzelak?= <michal.grzelak@intel.com>
 Date: Fri, 4 Sep 2026 14:31:42 +0200
-Subject: [PATCH 02/14] drm/i915/bios: store VBT #57's metadata in
+Subject: [PATCH 02/15] drm/i915/bios: store VBT #57's metadata in
  intel_vbt_data
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8

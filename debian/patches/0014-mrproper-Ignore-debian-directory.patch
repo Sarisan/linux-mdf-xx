@@ -1,7 +1,7 @@
-From f3be388c03677014650680344fb09f3f6dafbbbd Mon Sep 17 00:00:00 2001
+From 93315eb2e427a08e3cd254520d23f17190f92a7c Mon Sep 17 00:00:00 2001
 From: Maria Lisina <sekoohaka.sarisan@gmail.com>
-Date: Wed, 16 Sep 2026 21:29:17 +0500
-Subject: [PATCH 14/14] mrproper: Ignore debian directory
+Date: Tue, 22 Sep 2026 01:02:21 +0500
+Subject: [PATCH 14/15] mrproper: Ignore debian directory
 
 Signed-off-by: Maria Lisina <sekoohaka.sarisan@gmail.com>
 ---
@@ -9,7 +9,7 @@ Signed-off-by: Maria Lisina <sekoohaka.sarisan@gmail.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/Makefile b/Makefile
-index 73e7bac7527e..8d9d338ea64c 100644
+index c28f11c617a4..f8a5499af5cb 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -1746,7 +1746,7 @@ CLEAN_FILES += vmlinux.symvers modules-only.symvers \

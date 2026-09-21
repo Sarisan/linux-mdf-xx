@@ -1,7 +1,7 @@
-From cc764c21b6bcbf91e6be21709f8fdeee536d2de7 Mon Sep 17 00:00:00 2001
+From 0d33c1b1c3c08a5696f425ce1ed2d54b8f79476f Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20Grzelak?= <michal.grzelak@intel.com>
 Date: Fri, 4 Sep 2026 14:31:45 +0200
-Subject: [PATCH 05/14] drm/i915/buf_trans: add vfunc for VS/PE-O
+Subject: [PATCH 05/15] drm/i915/buf_trans: add vfunc for VS/PE-O
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -48,7 +48,7 @@ index 4cd1e4d76c7a..f31283a0331b 100644
  	return encoder->get_buf_trans(encoder, crtc_state, n_entries);
  }
 diff --git a/drivers/gpu/drm/i915/display/intel_display_types.h b/drivers/gpu/drm/i915/display/intel_display_types.h
-index c21e0c0ef0b1..2c95c4f01e62 100644
+index 96422641ae44..17a8930f6a1e 100644
 --- a/drivers/gpu/drm/i915/display/intel_display_types.h
 +++ b/drivers/gpu/drm/i915/display/intel_display_types.h
 @@ -286,6 +286,9 @@ struct intel_encoder {

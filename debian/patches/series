@@ -6,9 +6,10 @@
 0006-drm-i915-override-Snps-s-VS-PE-when-requested.patch
 0007-drm-i915-override-Combo-s-VS-PE-when-requested.patch
 0008-drm-i915-bios-remove-VS-PE-O-warning.patch
-0009-platform-x86-Add-Goodix-fingerprint-EC-mailbox-trans.patch
-0010-mfd-intel-lpss-Remove-redundant-DebugFS-error-check.patch
-0011-mfd-intel-lpss-Use-plain-octal-values-for-file-permi.patch
-0012-mfd-intel-lpss-Remove-extra-DebugFS-dentry.patch
-0013-mfd-intel-lpss-Switch-to-debugfs_remove.patch
+0009-mfd-intel-lpss-Remove-redundant-DebugFS-error-check.patch
+0010-mfd-intel-lpss-Use-plain-octal-values-for-file-permi.patch
+0011-mfd-intel-lpss-Remove-extra-DebugFS-dentry.patch
+0012-mfd-intel-lpss-Switch-to-debugfs_remove.patch
+0013-platform-x86-Add-Goodix-fingerprint-EC-mailbox-trans.patch
 0014-mrproper-Ignore-debian-directory.patch
+0015-linux7.2-rc1-bore-6.8.0.patch
