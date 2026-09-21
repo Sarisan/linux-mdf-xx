@@ -19,6 +19,7 @@ List of external hardware support and features enabled
 * Virtualization
 * Kernel-based Virtual Machine (KVM) support
 * Clang ThinLTO
+* Default TCP congestion control BBR
 * RFCOMM protocol support
 * NT synchronization primitive emulation
 * Universal TUN/TAP device driver support
@@ -31,6 +32,7 @@ List of external hardware support and features enabled
 * USB Mass Storage support
 * USB Attached SCSI
 * USB Winchiphead CH341 Single Port Serial Driver
+* IOMMU default domain type Translated - Strict
 * Android Binder IPC Driver
 * Android Binderfs filesystem
 * exFAT filesystem support
