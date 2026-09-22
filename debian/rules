@@ -37,6 +37,7 @@ override_dh_auto_install:
 	install -D -m 644 $(CURDIR)/.config $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/boot/config-$(KERNELRELEASE)
 	install -D -m 644 $(CURDIR)/arch/x86/boot/bzImage $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/boot/vmlinuz-$(KERNELRELEASE)
 	rm -f $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/usr/lib/modules/$(KERNELRELEASE)/build
+	install -D -m 644 $(CURDIR)/debian/modules-load.conf $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/etc/modules-load.d/mdf-xx.conf
 
 	install -d $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx-dbg
 	$(MAKE) -j $(JOBS) ARCH=x86_64 LLVM=$(LLVM) INSTALL_MOD_PATH=$(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx-dbg/usr/lib/debug modules_install
