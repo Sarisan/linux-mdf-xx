@@ -1,3 +1,10 @@
+linux-mdf-xx (7.2.7-2) stable; urgency=low
+
+  * Disabled unused ethernet drivers.
+  * Made ntsync load on boot.
+
+ -- Maria Lisina <sekoohaka.sarisan@gmail.com>  Tue, 22 Sep 2026 15:54:36 +0000
+
 linux-mdf-xx (7.2.7-1) stable; urgency=low
 
   * Updated to 7.2.7.
