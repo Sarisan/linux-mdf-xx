@@ -12,9 +12,9 @@ Build-Depends: debhelper-compat (= 13),
                libdw-dev,
                libelf-dev,
                libssl-dev,
-               clang-21,
-               lld-21,
-               llvm-21
+               clang-22,
+               lld-22,
+               llvm-22
 Standards-Version: 4.7.4
 
 Package: linux-image-mdf-xx

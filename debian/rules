@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 JOBS := $(shell nproc)
-LLVM := -21
+LLVM := -22
 
 KERNELVERSION := $(shell $(MAKE) -s ARCH=x86_64 LLVM=$(LLVM) kernelversion)
 GET_KERNELRELEASE = $(shell $(MAKE) -s ARCH=x86_64 LLVM=$(LLVM) kernelrelease)
