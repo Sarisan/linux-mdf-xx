@@ -1,3 +1,9 @@
+linux-mdf-xx (7.2.7-4) stable; urgency=low
+
+  * Updated LLVM to 22.
+
+ -- Maria Lisina <sekoohaka.sarisan@gmail.com>  Wed, 23 Sep 2026 10:57:02 +0000
+
 linux-mdf-xx (7.2.7-3) stable; urgency=low
 
   * Disabled unused i2c and media drivers.
