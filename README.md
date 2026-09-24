@@ -7,12 +7,6 @@ Support for Goodix eSPI fingerprint reader (GXFP5130)
 Burst-Oriented Response Enhancer CPU Scheduler  
 And support for some external hardware
 
-External hardware support is being added on demand  
-I don't enable all possible hardware blindly
-
-If you need some external hardware support  
-You should open an issue
-
 ## External
 
 List of external hardware support and features enabled
@@ -39,6 +33,9 @@ List of external hardware support and features enabled
 * NTFS Read-Write file system support
 * SquashFS 4.0 - Squashed file system support
 
+External hardware support is being added on demand, I don't enable all possible hardware blindly  
+If you need some external hardware support, you should open an issue
+
 ## Building
 
 Clone this repository somewhere and run this command inside it to download Linux Kernel source  
@@ -61,6 +58,6 @@ When the building is done you will see `.deb` files in the upper directory
 
 All modern distributions provide generic kernel which prefers legacy and common drivers over modern alternatives and platform specific options, therefore I made this kernel to target specific platform (MDF-XX) utilizing modern drivers and platform specific options
 
-What benefits will you get from this? In case with this kernel you will notice slightly better performance, smoother experience, faster system boot and significantly better power saving
+What benefits will you get from this? In case with this kernel you will notice significantly better performance, smoother experience, faster system boot and significantly better power saving
 
 Also unlike official Debian kernel you will get a seamless BGRT/Plymouth transition using modern EFI DRM instead of legacy EFI Framebuffer
