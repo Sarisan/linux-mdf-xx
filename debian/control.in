@@ -31,8 +31,9 @@ Depends: dracut,
          firmware-iwlwifi,
          firmware-sof-signed,
          ${misc:Depends}
-Recommends: apparmor,
-            firmware-realtek
+Recommends: apparmor
+Suggests: systemd,
+          firmware-realtek
 Description: Linux Kernel for Huawei Matebook D 14 2023 (MDF-XX)
 
 Package: linux-image-mdf-xx-dbg
