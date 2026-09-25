@@ -19,7 +19,7 @@ Standards-Version: 4.7.4
 
 Package: linux-image-mdf-xx
 Architecture: amd64
-Depends: linux-image-@KERNELVERSION@-mdf-xx,
+Depends: linux-image-@KERNELVERSION@-mdf-xx (= ${binary:Version}),
          ${misc:Depends}
 Description: Linux Kernel for Huawei Matebook D 14 2023 (MDF-XX)
 
@@ -39,7 +39,7 @@ Description: Linux Kernel for Huawei Matebook D 14 2023 (MDF-XX)
 Package: linux-image-mdf-xx-dbg
 Section: debug
 Architecture: amd64
-Depends: linux-image-@KERNELVERSION@-mdf-xx-dbg,
+Depends: linux-image-@KERNELVERSION@-mdf-xx-dbg (= ${binary:Version}),
          ${misc:Depends}
 Description: Linux Kernel debug for Huawei Matebook D 14 2023 (MDF-XX)
 
