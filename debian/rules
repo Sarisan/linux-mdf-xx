@@ -23,7 +23,6 @@ override_dh_auto_configure:
 
 override_dh_auto_build:
 	$(MAKE) -j $(JOBS) ARCH=x86_64 LLVM=$(LLVM) all
-	$(MAKE) -j $(JOBS) ARCH=x86_64 LLVM=$(LLVM) modules
 
 override_dh_auto_test:
 	@echo "Skipping dh_auto_test"
