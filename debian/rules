@@ -29,12 +29,13 @@ override_dh_auto_test:
 override_dh_auto_install:
 	$(eval KERNELRELEASE := $(shell $(MAKE) -s O=$(CURDIR)/build ARCH=x86_64 LLVM=$(LLVM) kernelrelease))
 
+	install -D -m 644 $(CURDIR)/debian/modules-load.conf $(CURDIR)/debian/linux-image-mdf-xx/etc/modules-load.d/mdf-xx.conf
+
 	install -d $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx
 	$(MAKE) -j $(JOBS) O=$(CURDIR)/build ARCH=x86_64 LLVM=$(LLVM) INSTALL_MOD_STRIP=1 INSTALL_MOD_PATH=$(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/usr modules_install
 	install -D -m 644 $(CURDIR)/build/System.map $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/boot/System.map-$(KERNELRELEASE)
 	install -D -m 644 $(CURDIR)/build/.config $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/boot/config-$(KERNELRELEASE)
 	install -D -m 644 $(CURDIR)/build/arch/x86/boot/bzImage $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/boot/vmlinuz-$(KERNELRELEASE)
-	install -D -m 644 $(CURDIR)/debian/modules-load.conf $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/etc/modules-load.d/mdf-xx.conf
 	rm -f $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/usr/lib/modules/$(KERNELRELEASE)/build
 
 	install -d $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx-dbg
