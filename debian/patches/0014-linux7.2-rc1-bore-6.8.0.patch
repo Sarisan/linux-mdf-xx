@@ -1,7 +1,7 @@
-From 3d40a62f91a2081cfa53e499c9a4f210cd6f7d98 Mon Sep 17 00:00:00 2001
+From 3a7986a0f166b6e7f6c592ba7777cfe991d562a9 Mon Sep 17 00:00:00 2001
 From: Masahito S <firelzrd@gmail.com>
 Date: Tue, 28 Jul 2026 23:17:12 +0900
-Subject: [PATCH 15/15] linux7.2-rc1-bore-6.8.0
+Subject: [PATCH 14/14] linux7.2-rc1-bore-6.8.0
 
 ---
  include/linux/sched.h        |  28 +++
@@ -177,7 +177,7 @@ index ce1435cb08b1..9eee2005e25f 100644
 +	 an unnecessarily large base slice, resulting in high scheduling
 +	 latency and poor system responsiveness.
 diff --git a/kernel/exit.c b/kernel/exit.c
-index e4cd7232015d..4fb2681bde07 100644
+index 0abce8edb28b..7c41ff9af9f9 100644
 --- a/kernel/exit.c
 +++ b/kernel/exit.c
 @@ -147,7 +147,11 @@ static void __unhash_process(struct release_task_post *post, struct task_struct
@@ -193,7 +193,7 @@ index e4cd7232015d..4fb2681bde07 100644
  	}
  	list_del_rcu(&p->thread_node);
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 3340dbaf2bb4..80933c67f9f6 100644
+index 2c88568b0463..9dd28813b10d 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -120,6 +120,10 @@
@@ -758,7 +758,7 @@ index e2cf3b08d4e9..aad22593027a 100644
  
  #ifdef CONFIG_CGROUP_CPUACCT
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 35d647c8c368..8d75d7b3dcdc 100644
+index 3d6c55598726..cdf4dd08e381 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -100,6 +100,10 @@
@@ -784,7 +784,7 @@ index 35d647c8c368..8d75d7b3dcdc 100644
  	struct load_weight lw;
  
  	if (task_has_idle_policy(p)) {
-@@ -8982,6 +8990,10 @@ void __init sched_init(void)
+@@ -8989,6 +8997,10 @@ void __init sched_init(void)
  	BUG_ON(!sched_class_above(&ext_sched_class, &idle_sched_class));
  #endif
  

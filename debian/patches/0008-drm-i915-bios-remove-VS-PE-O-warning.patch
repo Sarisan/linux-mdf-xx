@@ -1,7 +1,7 @@
-From 7a09d0385db7993bcd612ca7fbb9e396cf2c080d Mon Sep 17 00:00:00 2001
+From 66322e81938b5eb70ef5d528c76f52a42af84ed8 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20Grzelak?= <michal.grzelak@intel.com>
 Date: Fri, 4 Sep 2026 14:31:48 +0200
-Subject: [PATCH 08/15] drm/i915/bios: remove VS/PE-O warning
+Subject: [PATCH 08/14] drm/i915/bios: remove VS/PE-O warning
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

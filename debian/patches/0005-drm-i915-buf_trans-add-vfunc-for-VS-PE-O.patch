@@ -1,7 +1,7 @@
-From 0d33c1b1c3c08a5696f425ce1ed2d54b8f79476f Mon Sep 17 00:00:00 2001
+From 9547df5d1922bd36b99ee6ba31352aeaf3df05ce Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20Grzelak?= <michal.grzelak@intel.com>
 Date: Fri, 4 Sep 2026 14:31:45 +0200
-Subject: [PATCH 05/15] drm/i915/buf_trans: add vfunc for VS/PE-O
+Subject: [PATCH 05/14] drm/i915/buf_trans: add vfunc for VS/PE-O
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

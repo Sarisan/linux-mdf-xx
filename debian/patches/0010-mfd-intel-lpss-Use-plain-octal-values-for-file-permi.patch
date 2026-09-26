@@ -1,7 +1,7 @@
-From 43226eb39d1035317e453fa2baf9db4d3dd4203a Mon Sep 17 00:00:00 2001
+From 2b2bee8126af69bcc9b73542ca0276eed7bffad2 Mon Sep 17 00:00:00 2001
 From: Maria Lisina <sekoohaka.sarisan@gmail.com>
 Date: Wed, 16 Sep 2026 21:23:48 +0500
-Subject: [PATCH 10/15] mfd: intel-lpss: Use plain octal values for file
+Subject: [PATCH 10/14] mfd: intel-lpss: Use plain octal values for file
  permissions
 
 S_IRUGO macro is obsoleted and not recommended to use,

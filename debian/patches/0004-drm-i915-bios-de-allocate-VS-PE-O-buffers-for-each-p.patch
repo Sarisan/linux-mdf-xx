@@ -1,7 +1,7 @@
-From 7e8d7f636664369d5f0802d0070afa366d864373 Mon Sep 17 00:00:00 2001
+From 62cd4da27ae522c55bda49d2712919fb908456c6 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20Grzelak?= <michal.grzelak@intel.com>
 Date: Fri, 4 Sep 2026 14:31:44 +0200
-Subject: [PATCH 04/15] drm/i915/bios: de/allocate VS/PE-O buffers for each
+Subject: [PATCH 04/14] drm/i915/bios: de/allocate VS/PE-O buffers for each
  port
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8

@@ -1,7 +1,7 @@
-From 9bc9ebe7d8a6cfba8e6e38b478632175c6136b4c Mon Sep 17 00:00:00 2001
+From 7e327bc76e2d41e85ac3afbd16ed4707535e3b52 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20Grzelak?= <michal.grzelak@intel.com>
 Date: Fri, 4 Sep 2026 14:31:46 +0200
-Subject: [PATCH 06/15] drm/i915: override Snps's VS/PE when requested
+Subject: [PATCH 06/14] drm/i915: override Snps's VS/PE when requested
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

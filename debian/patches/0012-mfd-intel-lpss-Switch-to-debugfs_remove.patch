@@ -1,7 +1,7 @@
-From 63aa31946184fb20eef8c6ec1ae8c3def3abd9b4 Mon Sep 17 00:00:00 2001
+From b416669981dbfa81df0c8c45c94535bb6d667ed9 Mon Sep 17 00:00:00 2001
 From: Maria Lisina <sekoohaka.sarisan@gmail.com>
 Date: Wed, 16 Sep 2026 21:23:50 +0500
-Subject: [PATCH 12/15] mfd: intel-lpss: Switch to debugfs_remove()
+Subject: [PATCH 12/14] mfd: intel-lpss: Switch to debugfs_remove()
 
 debugfs_remove_recursive() is deprecated and has become
 an alias to debugfs_remove(), replace it with the direct
