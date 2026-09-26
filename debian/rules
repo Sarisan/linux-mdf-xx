@@ -4,7 +4,6 @@ JOBS := $(shell nproc)
 LLVM := -22
 
 KERNELVERSION := $(shell $(MAKE) -s ARCH=x86_64 LLVM=$(LLVM) kernelversion)
-GET_KERNELRELEASE = $(shell $(MAKE) -s ARCH=x86_64 LLVM=$(LLVM) kernelrelease)
 
 debian/control: debian/control.in
 	@echo "Generating debian/control"
@@ -15,33 +14,33 @@ debian/control: debian/control.in
 	dh $@
 
 override_dh_auto_clean:
-	$(MAKE) ARCH=x86_64 LLVM=$(LLVM) mrproper
+	$(MAKE) O=$(CURDIR)/build ARCH=x86_64 LLVM=$(LLVM) mrproper
 
 override_dh_auto_configure:
-	cp $(CURDIR)/debian/config $(CURDIR)/.config
-	$(MAKE) ARCH=x86_64 LLVM=$(LLVM) olddefconfig
+	cp $(CURDIR)/debian/config $(CURDIR)/build/.config
+	$(MAKE) O=$(CURDIR)/build ARCH=x86_64 LLVM=$(LLVM) olddefconfig
 
 override_dh_auto_build:
-	$(MAKE) -j $(JOBS) ARCH=x86_64 LLVM=$(LLVM) all
+	$(MAKE) -j $(JOBS) O=$(CURDIR)/build ARCH=x86_64 LLVM=$(LLVM) all
 
 override_dh_auto_test:
 	@echo "Skipping dh_auto_test"
 
 override_dh_auto_install:
-	$(eval KERNELRELEASE := $(GET_KERNELRELEASE))
+	$(eval KERNELRELEASE := $(shell $(MAKE) -s O=$(CURDIR)/build ARCH=x86_64 LLVM=$(LLVM) kernelrelease))
 
 	install -d $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx
-	$(MAKE) -j $(JOBS) ARCH=x86_64 LLVM=$(LLVM) INSTALL_MOD_STRIP=1 INSTALL_MOD_PATH=$(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/usr modules_install
-	install -D -m 644 $(CURDIR)/System.map $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/boot/System.map-$(KERNELRELEASE)
-	install -D -m 644 $(CURDIR)/.config $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/boot/config-$(KERNELRELEASE)
-	install -D -m 644 $(CURDIR)/arch/x86/boot/bzImage $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/boot/vmlinuz-$(KERNELRELEASE)
-	rm -f $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/usr/lib/modules/$(KERNELRELEASE)/build
+	$(MAKE) -j $(JOBS) O=$(CURDIR)/build ARCH=x86_64 LLVM=$(LLVM) INSTALL_MOD_STRIP=1 INSTALL_MOD_PATH=$(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/usr modules_install
+	install -D -m 644 $(CURDIR)/build/System.map $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/boot/System.map-$(KERNELRELEASE)
+	install -D -m 644 $(CURDIR)/build/.config $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/boot/config-$(KERNELRELEASE)
+	install -D -m 644 $(CURDIR)/build/arch/x86/boot/bzImage $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/boot/vmlinuz-$(KERNELRELEASE)
 	install -D -m 644 $(CURDIR)/debian/modules-load.conf $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/etc/modules-load.d/mdf-xx.conf
+	rm -f $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx/usr/lib/modules/$(KERNELRELEASE)/build
 
 	install -d $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx-dbg
-	$(MAKE) -j $(JOBS) ARCH=x86_64 LLVM=$(LLVM) INSTALL_MOD_PATH=$(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx-dbg/usr/lib/debug modules_install
-	install -D -m 644 $(CURDIR)/System.map $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx-dbg/usr/lib/debug/lib/modules/$(KERNELRELEASE)/System.map
-	install -D -m 644 $(CURDIR)/vmlinux $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx-dbg/usr/lib/debug/lib/modules/$(KERNELRELEASE)/vmlinux
+	$(MAKE) -j $(JOBS) O=$(CURDIR)/build ARCH=x86_64 LLVM=$(LLVM) INSTALL_MOD_PATH=$(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx-dbg/usr/lib/debug modules_install
+	install -D -m 644 $(CURDIR)/build/System.map $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx-dbg/usr/lib/debug/lib/modules/$(KERNELRELEASE)/System.map
+	install -D -m 644 $(CURDIR)/build/vmlinux $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx-dbg/usr/lib/debug/lib/modules/$(KERNELRELEASE)/vmlinux
 
 	sed -e 's/@KERNELRELEASE@/$(KERNELRELEASE)/g' \
 		$(CURDIR)/debian/linux-image.postinst.in > $(CURDIR)/debian/linux-image-$(KERNELVERSION)-mdf-xx.postinst
